@@ -6,7 +6,7 @@ Clone the Git Repository
 ```
 git clone https://github.com/nanard29/Submitting-PayForBlob.git
 ```
-Go to the directory of the install.sh bash file and set permission to execute
+Go to the directory 
 
 Install Python, Flask to run Submit-PayForBlob.py
 ```
