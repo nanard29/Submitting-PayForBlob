@@ -40,14 +40,14 @@ def index():
 @app.route("/submit", methods=["POST"])
 def submit():
 
-    # Generate random n_id and msg
+    # Generate random number
     n_id, msg = generate_rand_hex_encoded_namespace_id(), generate_rand_message()
 
-    # Submit data via curl
+    # Submit through curl
     curl_cmd = f"curl -X POST -H 'Content-type: application/json' -d '{{\"namespace_id\": \"{n_id}\", \"data\": \"{msg}\", \"gas_limit\": 80000, \"fee\": 2000}}' http://localhost:26659/submit_pfb"
     submit_output = subprocess.check_output(curl_cmd, shell=True)
 
-    # Get height from the response
+    # Get data from the response
     submit_response = json.loads(submit_output)
     height = submit_response["height"]
     txhash = submit_response["txhash"]
@@ -58,7 +58,7 @@ def submit():
     header_cmd = f"curl {header_url}"
     header_output = subprocess.check_output(header_cmd, shell=True)
 
-    # Extract share message from header output
+    # Share message 
     share_msg = json.loads(header_output.decode())["shares"][0]
 
     return render_template("result.html", n_id=n_id, msg=msg, height=height, txhash=txhash, share_msg=share_msg, signer=signer)
