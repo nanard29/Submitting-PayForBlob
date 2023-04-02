@@ -22,7 +22,19 @@ def generate_rand_message():
     # Return the hex-encoded string representation of the bytes
     return binascii.hexlify(msg).decode()
 
+def init():
+    while True:
+        initw = ''
+        return initw
+
+
 app = Flask(__name__)
+initw = init()
+
+app = Flask(__name__)
+
+@app.route("/")
+def index():
 render_template("index.html")
 
 
