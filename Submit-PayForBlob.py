@@ -22,11 +22,11 @@ def generate_rand_message():
     # Return the hex-encoded string representation of the bytes
     return binascii.hexlify(msg).decode()
 
-
+app = Flask(__name__)
 render_template("index.html")
 
 
-
+@app.route("/submit", methods=["POST"])
 def submit():
 
     # Generate random n_id and msg
@@ -52,3 +52,6 @@ def submit():
 
     return render_template("result.html", n_id=n_id, msg=msg, height=height, txhash=txhash, share_msg=share_msg, signer=signer)
 
+
+if __name__ == "__main__":
+    app.run()
