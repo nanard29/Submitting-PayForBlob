@@ -13,11 +13,14 @@ Install Python to run Submit-PayForBlob.py
 
     sudo apt-get update
     sudo apt-get install -y python3
+    pip3 install flask request
+    sudo apt install python3-pip
 
 
 ```
 
 Run Submit-PayForBlob.py
 ```
+cd Submitting-PayForBlob
 python3 Submit-PayForBlob.py
 ```
