@@ -31,12 +31,12 @@ def set_password():
         print("Passwords do not match. Please try again.")
 
 
-@app.route("/")
+
 def index():
     return render_template("index.html")
 
 
-@app.route("/submit", methods=["POST"])
+
 def submit():
 
     # Generate random n_id and msg
