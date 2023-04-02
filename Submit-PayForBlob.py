@@ -62,6 +62,3 @@ def submit():
 
     return render_template("result.html", n_id=n_id, msg=msg, height=height, txhash=txhash, share_msg=share_msg, signer=signer)
 
-
-if __name__ == "__main__":
-    app.run()
