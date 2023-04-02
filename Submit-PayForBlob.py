@@ -32,8 +32,7 @@ def set_password():
 
 
 
-def index():
-    return render_template("index.html")
+render_template("index.html")
 
 
 
