@@ -22,15 +22,6 @@ def generate_rand_message():
     # Return the hex-encoded string representation of the bytes
     return binascii.hexlify(msg).decode()
 
-def set_password():
-    while True:
-        password = getpass.getpass(prompt="Enter a password for PFB: ")
-        confirm_password = getpass.getpass(prompt="Confirm password: ")
-        if password == confirm_password:
-            return password
-        print("Passwords do not match. Please try again.")
-
-
 
 render_template("index.html")
 
