@@ -24,7 +24,7 @@ def generate_rand_message():
 
 def init():
     while True:
-        initw = ''
+        initw = 'OK'
         return initw
 
 
