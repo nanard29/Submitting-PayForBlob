@@ -31,7 +31,6 @@ def init():
 app = Flask(__name__)
 initw = init()
 
-app = Flask(__name__)
 
 @app.route("/")
 def index():
